@@ -5,13 +5,13 @@ script = "According to all known laws of aviation, there is no way that a bee sh
 
 def countDown():
 	ready = input("Warning this script will type until told to stop by your parameters!! If you need to stop early simple return to the terminal and type Ctrl+C. To start open up iMessage then press c continue and put your cursor in the text box before the 5 sec timer runs out then it will begin typing.\n")
-	for x in range (0, 45):
+	for x in range (0, 5):
 		time.sleep(1)
 		print(5-x)
 
 def sendWord(word, num):
 	countDown()
-	for x in range(0, n):
+	for x in range(0, num):
 		pyautogui.write(word)
 		pyautogui.press("enter")
 
@@ -28,7 +28,7 @@ while True:
 		sendParagraph(script)
 	elif option == "w":
 		word = input("What word would you like to send?\n")
-		num = input("How many times would you like to send it?\n")
+		num = int(input("How many times would you like to send it?\n"))
 		sendWord(word, num)
 	elif option == "p":
 		para = input("Paste the text then hit enter\n")
